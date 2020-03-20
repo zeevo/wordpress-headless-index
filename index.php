@@ -21,9 +21,6 @@
 </style>
 
 <div class="container box">
-  <div class="jumbotron">
-    <h1>Welcome</h1>
-  </div>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Admin</h5>

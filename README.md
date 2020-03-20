@@ -1,16 +1,22 @@
-# wordpress-headless-index
+# Headless Wordpress
 
-This is just a useful index to drop into your headless themes
+This is a useful themefor use in Jamstack applications
 
-![screenshot](./screenshot.png)
+# Setup
 
-## How-to
+In `index.php` replace `$site_location` with your site's location.
 
-Change the following lines of code to fit your admin location and site location
-
-```php
+````php
 <?php
-	$site_location='#';
-	$admin_location='/wp-admin'
+
+$site_location = 'http://localhost:8000'
+
 ?>
-```
+
+<meta content="0; URL='<?php site_location ?>''" http-equiv"refresh">
+
+<!-- just in case the meta tag is not read properly, here is plan B: a JS redirect -->
+<script type="text/javascript">
+  window.location = '<?php site_location ?>';
+</script>```
+````
